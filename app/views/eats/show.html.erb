@@ -3,8 +3,8 @@
 <%= render @eat %>
 
 <div>
-  <%= link_to "Edit this eat", edit_eat_path(@eat), class: "btn btn-dark" %> |
-  <%= link_to "Back to eats", eats_path, class: "btn btn-dark" %> |
+  <%= link_to "Edit this Restaurant", edit_eat_path(@eat), class: "btn btn-dark" %> |
+  <%= link_to "Back to Restaurants", eats_path, class: "btn btn-dark" %> |
 
-  <%= link_to "Destroy this eat", @eat, method: :delete, class: "btn btn-dark" %>
+  <%= link_to "Delete this Restaurant", @eat, method: :delete, class: "btn btn-dark" %>
 </div>
