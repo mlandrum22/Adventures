@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Adventures</h1>
+
+<table class="table table-striped table-boredered table-hover">
+  <thead class = "thead-dark">
+    <tr>
+      <th>Activity</th>
+      <th>Location</th>
+      <th>Description</th>
+      <th>Have We Did It?</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adventures.each do |adventure| %>
+      <tr>
+        <td>  <%= link_to adventure.activity, adventure %>  </td>
+        <td>  <%= adventure.location %>          </td>
+        <td>  <%= adventure.description %>       </td>
+        <td>  <%= adventure.have_we_did_it %>             </td>
+        <td>  <%= link_to 'Edit', edit_adventure_path(adventure) %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Adventure", new_adventure_path, class:"btn btn-secondary" %>

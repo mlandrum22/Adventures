@@ -1,0 +1,68 @@
+<%= form_with(model: eat) do |form| %>
+  <% if eat.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(eat.errors.count, "error") %> prohibited this eat from being saved:</h2>
+
+      <ul>
+        <% eat.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class = "field form group">
+    <% form.label :name, style: "display: block" %>
+    <%= form.text_field :name, class: "form-control", placeholder:"Name" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :number, style: "display: block" %>
+    <%= form.text_field :number, class: "form-control", placeholder:"Phone Number" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :food_type, style: "display: block" %>
+    <%= form.text_field :food_type, class: "form-control", placeholder:"Type of Food"%>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :part_of_town, style: "display: block" %>
+    <%= form.text_field :part_of_town, class: "form-control", placeholder:"Part of Town" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :address, style: "display: block" %>
+    <%= form.text_field :address, class: "form-control", placeholder:"Address" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :url, style: "display: block" %>
+    <%= form.text_field :url, class: "form-control", placeholder:"URL" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :menu, style: "display: block" %>
+    <%= form.text_field :menu, class: "form-control", placeholder:"Menu URL" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :description, style: "display: block" %>
+    <%= form.text_field :description, class: "form-control", placeholder:"Description" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :lj_been, style: "display: block" %>
+    <%= form.text_field :lj_been, class: "form-control", placeholder:"Has LJ Been?" %>
+  </div>
+  <br/>
+  <div class = "field form group">
+    <% form.label :michael_been, style: "display: block" %>
+    <%= form.text_field :michael_been, class: "form-control", placeholder:"Has Michael Been?" %>
+  </div>
+  <br/>
+  <div>
+    <%= form.submit "Submit Restaurant", class:'btn btn-secondary' %> |
+    <%= link_to "Back to Restaurants", eats_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>

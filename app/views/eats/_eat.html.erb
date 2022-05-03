@@ -1,0 +1,32 @@
+<div class="container-fluid p-5 bg-light">
+  <div id="<%= dom_id eat %>">
+    <h1 class='display-4'>
+      <%= eat.name %>
+    </h1>
+    <p class='lead'>
+      <%= eat.food_type %> | <%= eat.number %> | <%= link_to eat.url , "#{eat.url}" %>
+      <br/>
+      <%= eat.address %>
+    </p>
+
+    <p>
+      <strong>Description:</strong>
+      <%= eat.description %>
+    </p>
+    <p>
+      <strong>Menu:</strong>
+      <%= link_to eat.menu, "#{eat.menu}" %>
+    </p>
+
+    <p>
+      <strong>Has LJ been?</strong>
+      <%= eat.lj_been %>
+    </p>
+
+    <p>
+      <strong>Has Michael been? </strong>
+      <%= eat.michael_been %>
+    </p>
+
+  </div>
+</div>

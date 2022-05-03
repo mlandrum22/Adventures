@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Restaurants</h1>
+
+<table class="table table-striped table-boredered table-hover">
+  <thead class = "thead-dark">
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Part of Town</th>
+      <th>Phone Number</th>
+      <th>Has LJ Been?</th>
+      <th>Has Mike Been?</th>
+      <th</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @eats.each do |eat| %>
+      <tr>
+        <td>  <%= link_to eat.name, eat %>  </td>
+        <td>  <%= eat.food_type %>          </td>
+        <td>  <%= eat.part_of_town %>       </td>
+        <td>  <%= eat.number %>             </td>
+        <td>  <%= eat.lj_been %>            </td>
+        <td>  <%= eat.michael_been %>       </td>
+        <td>  <%= link_to 'Edit', edit_eat_path(eat) %> </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Restaurant", new_eat_path, class:"btn btn-secondary" %>

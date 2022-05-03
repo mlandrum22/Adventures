@@ -1,0 +1,11 @@
+<h1>Editing adventure</h1>
+
+<%= render "form", adventure: @adventure %>
+
+<br>
+
+<div>
+  <%= button_to "Destroy this adventure", @adventure, method: :delete, class: "btn btn-dark" %>
+  <% link_to "Show this adventure", @adventure %>
+  <% link_to "Back to adventures", adventures_path %>
+</div>

@@ -1,0 +1,42 @@
+<%= form_with(model: adventure) do |form| %>
+  <% if adventure.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(adventure.errors.count, "error") %> prohibited this adventure from being saved:</h2>
+
+      <ul>
+        <% adventure.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <br/>
+  <div class = "field form group">
+    <%= form.label :activity, style: "display: block" %>
+    <%= form.text_field :activity, class: "form-control", placeholder:"Activity" %>
+  </div>
+
+  <br/>
+  <div class = "field form group">
+    <%= form.label :location, style: "display: block" %>
+    <%= form.text_field :location, class: "form-control", placeholder:"Location" %>
+  </div>
+
+  <br/>
+  <div class = "field form group">
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description, class: "form-control", placeholder:"Description" %>
+  </div>
+
+  <br/>
+  <div class = "field form group">
+    <%= form.label :have_we_did_it, style: "display: block" %>
+    <%= form.text_field :have_we_did_it, class: "form-control", placeholder:"Have We Did it?" %>
+  </div>
+  <br/>
+  <div>
+    <%= form.submit "Submit Adventure", class:'btn btn-secondary' %> |
+    <%= link_to "Back to Adventures", adventures_path, class: "btn btn-secondary" %>
+  </div>
+<% end %>
