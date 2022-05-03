@@ -1,7 +1,7 @@
 <%= form_with(model: eat) do |form| %>
   <% if eat.errors.any? %>
     <div style="color: red">
-      <h2><%= pluralize(eat.errors.count, "error") %> prohibited this eat from being saved:</h2>
+      <h2><%= pluralize(eat.errors.count, "error") %> prohibited this Restaurant from being saved:</h2>
 
       <ul>
         <% eat.errors.each do |error| %>
